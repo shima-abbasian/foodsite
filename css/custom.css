@@ -1,0 +1,537 @@
+@font-face {
+    font-family: "IRANSansWeb";
+    src: url("/fonts/IRANSansWeb.eot");
+    src: url("/fonts/IRANSansWeb_Bold.eot") format("eot");
+    src: url("/fonts/IRANSansWeb_Light.eot") format("eot");
+    src: url("/fonts/IRANSansWeb_UltraLight.eot") format("eot");
+    src: url("/fonts/IRANSansWeb_Medium.eot") format("eot");
+}
+@font-face {
+    font-family: "iranYekan";
+    src: url("/fonts/iranyekanwebbold(fanum).eot");
+    src: url("/fonts/iranyekanweblight(fanum).eot") format("eot");
+    src: url("/fonts/iranyekanwebregular(fanum).eot") format("eot");
+}
+
+
+
+
+body,p,h1,h2,h3,h4,h5,h6,span,ul,li {
+    direction: rtl;
+    padding: 0;
+    font-family: IRANSansWeb,iranYekan, Arial, sans-serif;
+    font-weight:normal;
+}
+
+.bannerStyle{
+    background-image: url('../img/banner.jpg');
+    height:334px;
+    width:auto;
+    text-align: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.bannerStyle h1{
+    color:white;
+    font-size:40px;
+    padding-top:90px;
+    text-shadow:black;
+}
+.bannerStyle p{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    text-shadow: black;
+    padding-bottom: 30px;
+}
+
+.bannerStyle button {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: black;
+    padding: 7px 30px;
+
+}
+
+
+/*mouse frame banner*/
+.mouse-frame {
+    height: 74px;
+    width: 74px;
+    border-radius: 50%;
+    position: absolute;
+    top: 390px;
+    left: calc(50% - 37px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.mouse-frame .mouse {
+    position: relative;
+    height: 35px;
+    width: 25px;
+    border: solid 2px #f25c04;
+    border-radius: 20px;
+}
+
+.mouse-frame .mouse:before {
+    content: '';
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: #f25c04;
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    -webkit-animation: scroll 1s infinite;
+    animation: scroll 1s infinite;
+}
+
+.mouse-frame:after {
+    -webkit-transform: scaleX(1.25) scaleY(1.09);
+    transform: scaleX(1.25) scaleY(1.09);
+    content: '';
+    width: 74px;
+    height: 37px;
+    opacity: 0.15;
+    border-radius: 1000px 1000px 0 0;
+    position: absolute;
+    top: -11.6%;
+    background-color: #ffffff;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        -webkit-transform: translateY(6px) translateX(-50%);
+        transform: translateY(6px) translateX(-50%);
+    }
+    100% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        -webkit-transform: translateY(6px) translateX(-50%);
+        transform: translateY(6px) translateX(-50%);
+    }
+    100% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+
+.hero-bottom-border:before {
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: 420px;
+    background-color: #ffffff;
+    opacity: 0.2;
+}
+/*mouse*/
+
+
+
+body{
+    background: #f6f8fd;
+    height: auto;
+}
+
+.card-margin {
+    margin-bottom: 1.875rem;
+}
+
+.card {
+
+    border: 0;
+    box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 1px solid #e6e4e9;
+    border-radius: 8px;
+}
+.card:hover{border: 1px solid #d3d3d3;
+    animation: bounce 1s;
+}
+
+.card .card-header.no-border {
+    border: 0;
+}
+.card .card-header {
+    background: none;
+    padding: 0 0.9375rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+
+
+.elementsCenter{
+    text-align: center;
+
+}
+
+
+/*owl carousel*/
+.product-item{
+    border: 1px solid lightgray;
+}
+.product-img{
+    position: relative;
+    overflow: hidden;
+}
+.btns{
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+.btns button{
+    border: 1px solid gray;
+    background-color: #F25C04;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.btns button:hover{
+    color: black;
+}
+.product-img:hover .btns{
+    bottom: 0;
+}
+.heart-icon{
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    font-size: 18px;
+}
+.product-type{
+    font-size: 13px;
+    opacity: 0.8;
+}
+.product-name{
+    transition: all 0.3s ease-in-out;
+}
+.product-name:hover{
+    color: #F25C04 !important;
+}
+.product-price{
+    color: #5c636a;
+}
+.rating{
+    font-size: 13px;
+}
+.product-item{
+    width: 300px;
+}
+
+
+/*product slider*/
+.MultiCarousel {
+    float: left;
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    position:relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+    float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+    text-align: center;
+    padding:0px;
+    margin:5px;
+    background:#f1f1f1;
+    color:#666;
+}
+
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+    position:absolute;
+    border-radius:50%;
+    top:calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+    left:0;
+}
+
+.MultiCarousel .rightLst {
+    right:0;
+}
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background:#ccc;
+}
+
+
+/*=======================*/
+/*  food board page css  */
+/*=======================*/
+.cardOrder{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.top-container{
+    display: flex;
+    align-items: center;
+    padding: 1rem !important;
+
+}
+.profile-image{
+    border-radius: 5px;
+    border: 1px solid #e55119;
+}
+.name{
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
+}
+.mail{
+    font-size: 11px;
+    color: grey;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.middle-container{
+    background-color: #eee;
+    border-radius: 12px;
+
+}
+.middle-container:hover {
+    border: 1px solid #5957f9;
+}
+.dollar-div{
+    background-color: #5957f9;
+    padding: 12px;
+    border-radius: 10px;
+}
+.round-div{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dollar{
+    font-size: 16px !important;
+    color: #5957f9 !important;
+    font-weight: bold !important;
+}
+
+
+.current-balance{
+    font-size: 15px;
+    color: #272727;
+    font-weight: bold;
+}
+.amount{
+    color: #5957f9;
+    font-size: 16px;
+    font-weight: bold;
+}
+.dollar-sign{
+    font-size: 16px;
+    color: #272727;
+    font-weight: bold;
+}
+
+.recent-border{
+    border-left: 2px solid #5957f9;
+    display: flex;
+    align-items: center;
+
+}
+.recent-border:hover {
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+.recent-orders{
+    font-size: 16px;
+    font-weight: 700;
+    color: #5957f9;
+    margin-left: 2px;
+}
+
+.wishlist{
+    font-size: 16px;
+    font-weight: 700;
+    color: #272727;
+
+}
+.wishlist-border:hover{
+    border-bottom: 1px solid #dee2e6!important;
+}
+.fashion-studio{
+    font-size: 16px;
+    font-weight: 700;
+    color: #272727;
+}
+.fashion-studio-border:hover {
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+.qty-buttons {
+
+    position: relative;
+    width: 70px;
+    height: 20px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-align: justify-all;
+}
+
+.foodorder{
+    background-color: #E55119FF;
+    color: white;
+    font-size: medium;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: #5c636a;
+
+}
+.gheymat{
+    font-size: 12px;
+    padding-right: 5rem;
+}
+
+.delivery{
+    border-top: 1px dashed #e0e0e0;
+    border-bottom: 1px dashed #e0e0e0;
+    font-size: 13px;
+}
+
+.product-grid{
+    color: #FFD200;
+    font-size: 13px;
+
+}
+
+.myBtn{
+    background-color: #f25c04;
+    color: white;
+}
+@keyframes bounce{ 30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);}
+}
+
+.myBtn:hover{
+animation: bounce 1s;}
+
+
+.mylink
+@keyframes bounce{ 30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);}
+}
+
+.mylink:hover{
+    animation: bounce .5s;}
+
+
+
+
+.myrow{
+    margin-right: 0;
+}
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea{
+    font-size: 14px;
+    width: 100%; /* Full width */
+    padding: 6px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 10px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+}
+
+label{
+    font-size: 15px;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:50%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+
+
+
+
+
+
+

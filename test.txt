@@ -1,0 +1,36 @@
+[
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "برگر با سس قارچ",
+		"price" : "75000 تومن"
+	},
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "پیتزا مخصوص",
+		"price" : "75000 تومن"
+	},
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "سیب زمینی با قارچ و پنیر",
+		"price" : "75000 تومن"
+	},
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "هات داگ با سس مخصوص",
+		"price" : "75000 تومن"
+	},
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "مینی پیتزا",
+		"price" : "75000 تومن"
+	},
+	{
+		"image": "img/fast-food-1.jpg",
+		"title": "چیکن برگر با قارچ و پنیر",
+		"price" : "75000 تومن"
+	}
+]
+
+
+
+

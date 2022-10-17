@@ -1,0 +1,107 @@
+[
+		{
+
+			"image": "img/food1.jpg",
+			"title": "پیتزا مخصوص",
+			"price": 110000
+		},
+		{
+			"image": "img/food2.jpg",
+			"title": "پیتزا مارگریتا",
+			"price": 95000
+		},
+		{
+			"image": "img/food3.jpg",
+			"title": "برگر",
+			"price": 135000
+		},
+		{
+			"image": "img/food4.jpg",
+			"title": "چیکن برگر",
+			"price": 120000
+		},
+		{
+			"image": "img/food5.jpg",
+			"title": "هات داگ ویژه",
+			"price": 60000
+		},
+		{
+			"image": "img/food6.jpg",
+			"title": "هات داگ پنیری",
+			"price": 56000
+		},
+		{
+			"image": "img/food7.jpg",
+			"title": "ساندویچ ژانبون سرد",
+			"price": 65000
+		},
+		{
+			"image": "img/food8.jpg",
+			"title": "ساندویچ ژانبون تنوری",
+			"price": 75000
+		},
+		{
+			"image": "img/food9.jpg",
+			"title": "استیک ویژه",
+			"price": 170000
+		},
+		{
+			"image": "img/food10.jpg",
+			"title": "استیک با سیب زمینی",
+			"price": 150000
+		},
+		{
+			"image": "img/food11.jpg",
+			"title": "دنده کباب",
+			"price": 130000
+		},
+		{
+			"image": "img/food12.jpg",
+			"title": "استیک رزماری",
+			"price": 160000
+		},
+		{
+			"image": "img/food13.jpg",
+			"title": "قارچ سوخاری",
+			"price": 40000
+		},
+		{
+			"image": "img/food14.jpg",
+			"title": "قارچ سوخاری پنیری",
+			"price": 45000
+		},
+		{
+			"image": "img/food15.jpg",
+			"title": "سینی مخلفات",
+			"price": 65000
+		},
+		{
+			"image": "img/food16.jpg",
+			"title": "سینی مخلفات چیلی",
+			"price": 65000
+		},
+		{
+			"image": "img/drink1.jpg",
+			"title": "نوشابه",
+			"price": 20000
+		},
+		{
+			"image": "img/drink2.jpg",
+			"title": "آب معدنی",
+			"price": 10000
+		},
+		{
+			"image": "img/drink3.jpg",
+			"title": "دوغ",
+			"price": 10000
+		},
+		{
+			"image": "img/drink4.jpg",
+			"title": "دلستر",
+			"price": 12000
+		}
+	]
+
+
+
+
