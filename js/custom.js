@@ -111,23 +111,23 @@
 
 
 
-
-const exampleModal = document.getElementById('exampleModal')
-exampleModal.addEventListener('show.bs.modal', event => {
-    // Button that triggered the modal
-    const button = event.relatedTarget
-    // Extract info from data-bs-* attributes
-    const recipient = button.getAttribute('data-bs-whatever')
-    // If necessary, you could initiate an AJAX request here
-    // and then do the updating in a callback.
-    //
-    // Update the modal's content.
-    const modalTitle = exampleModal.querySelector('.modal-title')
-    const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-    modalTitle.textContent = `New message to ${recipient}`
-    modalBodyInput.value = recipient
-})
+//
+// const exampleModal = document.getElementById('exampleModal')
+// exampleModal.addEventListener('show.bs.modal', event => {
+//     // Button that triggered the modal
+//     const button = event.relatedTarget
+//     // Extract info from data-bs-* attributes
+//     const recipient = button.getAttribute('data-bs-whatever')
+//     // If necessary, you could initiate an AJAX request here
+//     // and then do the updating in a callback.
+//     //
+//     // Update the modal's content.
+//     const modalTitle = exampleModal.querySelector('.modal-title')
+//     const modalBodyInput = exampleModal.querySelector('.modal-body input')
+//
+//     modalTitle.textContent = `New message to ${recipient}`
+//     modalBodyInput.value = recipient
+// })
 
 
 
@@ -214,7 +214,7 @@ for (var i = 0; i < data.length; i++)
 
 
     $('#orderCart').append(
-        '            <div class="container d-flex justify-content-center mt-5 ">\n' +
+        '            <div class="container d-flex justify-content-center mt-5 orderSticky">\n' +
         '\n' +
         '                <div class="cardOrder shadow ">\n' +
         '                    <div class=" foodorder">\n' +
@@ -257,57 +257,91 @@ for (var i = 0; i < data.length; i++)
         '        </div>')
 
 
-if (document.readyState === "loading"){
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
 
-function  ready(){
-    var removeCartItemButtons = document.getElementsByClassName('removeItem')
-    for (var i=0; i < removeCartItemButtons.length; i++){
-        var button =removeCartItemButtons[i]
-        button.addEventListener('click',removeCartItem)
-    }
-    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
-    for (var i=0; i < quantityInputs.length; i++){
-        var input = quantityInputs[i]
-        input.addEventListener('change', quantityChanged)
-    }
 
-function removeCartItem(event){
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
-    updateCartTotal()
-}
 
-function quantityChanged(event){
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0){
-        input.value = 1
-    }
-    updateCartTotal()
-}
+        
+const addButton = newElement.querySelector(".addToCart")
+addButton.addEventListener("click", event=>{
+    findListOfItems.innerText =""
 
-}
+    fetch("foodItems.json", {
+        method: "POST",
+        Headers:{
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            cart_id:1,
+            product_id: product.id
+        })
+    })
+    .then(response => response.json())
+    .then(newCartItem=>{
+        cartArray.push(newCartItem);
+        renderAllCartItems(cartArray)
+    })
+})
 
-function updateCartTotal(){
-    var cartItemContainer = document.getElementsByClassName('cart-item')[0]
-    // console.log(cartItemContainer)
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-    var total = 0
-    for (var i = 0; i < cartRows.length; i++ ){
-        var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')
-            [0]
-        var price = parseFloat(priceElement.innerText.replace('تومان',''))
-        var quantity = quantityElement.value
-        total = total + (price * quantity)
-    }
-    total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = 'تومان' + total
-}
+const findListOfItems = document.querySelector(".cart-item")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+// remove from order box
+// if (document.readyState === "loading"){
+//     document.addEventListener('DOMContentLoaded', ready)
+// } else {
+//     ready()
+// }
+
+// function  ready(){
+//     var removeCartItemButtons = document.getElementsByClassName('removeItem')
+//     for (var i=0; i < removeCartItemButtons.length; i++){
+//         var button =removeCartItemButtons[i]
+//         button.addEventListener('click',removeCartItem)
+//     }
+//     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+//     for (var i=0; i < quantityInputs.length; i++){
+//         var input = quantityInputs[i]
+//         input.addEventListener('change', quantityChanged)
+//     }
+
+// function removeCartItem(event){
+//     var buttonClicked = event.target
+//     buttonClicked.parentElement.parentElement.parentElement.remove()
+//     updateCartTotal()
+// }
+
+// function quantityChanged(event){
+//     var input = event.target
+//     if (isNaN(input.value) || input.value <= 0){
+//         input.value = 1
+//     }
+//     updateCartTotal()
+// }
+
+// }
+
+
+
+
 
 
 
