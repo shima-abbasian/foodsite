@@ -162,7 +162,7 @@ for (var i = 0; i < data.length; i++)
 '        <span class="productPrice">' +data[i].price +
 '</span>\n' +
 '        <span> تومان</span>\n' +
-'        <a href="#" style="color: black; font-size: medium">\n' +
+'        <a href="#" style="color: black; font-size: medium" class="link-addTocart">\n' +
 '          <span class="addToCart fa fa-shopping-basket float-end"></span>\n' +
 '        </a>\n' +
 '      </div>\n' +
@@ -206,12 +206,54 @@ for (var i = 0; i < data.length; i++)
 '  </div>\n' +
 '</div>'+
 '</div>')
-
     }
-
     }) ;
 
+fetch("foodItems.json")
+    .then(response=>response.json())
+    .then(data=>{
+        for (var i = 0; i < data.length; i++)
+        {
+            $('#bestSelling').append('<div class="MultiCarousel " data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">\n' +
+                '                <div class="MultiCarousel-inner col-sm-4">' +
+                '                    <div class="item">\n' +
+                '                        <div class="pad15">\n' +
+                '                            <div class="product-grid">\n' +
+                '                                <div class="product-image">\n' +
+                '                                    <a href="">\n' +
+                '                                        <img class="pic-1"  src="' +data[i].image +
+                '">\n' +
+                '                                    </a>\n' +
+                '                                </div>\n' +
+                '\n' +
+                '                                <ul class="rating pb-5 bg-white">\n' +
+                '                                    <li class="fa fa-star"></li>\n' +
+                '                                    <li class="fa fa-star"></li>\n' +
+                '                                    <li class="fa fa-star"></li>\n' +
+                '                                    <li class="fa fa-star"></li>\n' +
+                '                                    <li class="fa fa-star"></li>\n' +
+                '                                </ul>\n' +
+                '\n' +
+                '                                <div class="product-content">\n' +
+                '                                    <a href="#" style="color: black;"><span class="card-title">' +data[i].title+
+                '</span></a>\n' +
+                '                                    <div class="pt-1" style="color: gray; font-weight: lighter">\n' +
+                '                                        <span>' +data[i].price+
+                '</span>\n' +
+                '                                    </div>\n' +
+                '                                    <div class="">\n' +
+                '                                    <hr class="border-warning ">\n' +
+                '                                        <a href="#" style="color: black; font-size: small"><span class="">+اضافه به سبد خرید</span></a>\n' +
+                '                                    </div>\n' +
+                '                                </div>\n' +
+                '                            </div>\n' +
+                '                        </div>\n' +
+                '                        </div>\n' +
+                '                        </div>\n' +
+                '                    </div>\n')
+        }
 
+    }) ;
 
     $('#orderCart').append(
         '            <div class="container d-flex justify-content-center mt-5 orderSticky">\n' +
@@ -223,10 +265,10 @@ for (var i = 0; i < data.length; i++)
         '\n' +
         '                   <div class="cart-row">\n'+
         '                      <div class="top-container cart-item" style="justify-content: space-between">\n' +
-        '                        <img src="img/fast-food-3.jpg" class="img-fluid profile-image" width="65" height="65">\n' +
+        '                        <img src="img/fast-food-3.jpg" class="img-fluid profile-image " width="65" height="65">\n' +
         '\n' +
         '                        <div class="ml-3">\n' +
-        '                            <h5 class="name pb-2">برگر ویژه</h5>\n' +
+        '                            <h5 class="name pb-2 foodName">برگر ویژه</h5>\n' +
         '                            <div class="qty-buttons">\n' +
         '                                <input type="button" value="+" class="qtyplus border-0 bg-transparent" name="plus">\n' +
         '                                <input type="text" name="qty" value="1" class="cart-quantity-input qty form-control border-0" style="font-size: small">\n' +
@@ -288,6 +330,9 @@ const findListOfItems = document.querySelector(".cart-item")
 
 
 
+$('.link-addTocart').click(function (){
+    $("data[i].title").append('<h5></h5>')
+});
 
 
 
